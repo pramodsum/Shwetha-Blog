@@ -1,0 +1,12 @@
+<article class="item loading {{post_class}}">
+  <header class="post-header">
+    <span class="post-meta">
+      <time datetime="{{date published_at timeago="true"}}">{{date published_at timeago="true"}}</time>
+      {{#if tags}}<span class="tagged"> on {{tags}}</span>{{/if}}
+    </span>
+    <h2 class="post-title"><a href="{{url}}" title="{{title}}">{{{title}}}</a></h2>
+  </header>
+  <section class="post-excerpt">
+    <p>{{excerpt}}&hellip; <a href="{{url}}" title="{{title}}" class="more-link">Read&nbsp;more&nbsp;&rarr;</a></p>
+  </section>
+</article>
