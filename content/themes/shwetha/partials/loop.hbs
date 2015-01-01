@@ -1,4 +1,24 @@
-<article class="post tag-video tag-youtube">
+{{! This is the post loop - each post will be output using this markup }}
+{{#foreach posts}}
+<article class="post {{post_class}}">
+    <header class="post-header">
+        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+        <div class="folded"><time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time></div>
+    </header>
+    <section class="post-excerpt">
+        <p>{{excerpt words="50"}}</p>
+        <p><a class="read-more" href="{{url}}">Read More</a></p>
+    </section>
+    <span class="post-meta">{{tags prefix="Tags: "}}</span>
+</article>
+{{/foreach}}
+
+{{! Previous/next page links - displayed on every page }}
+<nav class="pagination" role="pagination">
+  {{pagination}}
+</nav>
+
+{{!-- <article class="post tag-video tag-youtube">
   <header class="post-header">
     <h2 class="post-title"><a href="youtube-video/">Youtube Video</a></h2>
     <div class="folded"><time class="post-date" datetime="2013-11-01">01 Nov</time></div>
@@ -8,4 +28,4 @@
     <p><a href="youtube-video/" class="read-more">Read more</a></p>
   </section>
   <span class="post-meta"> Tags: video,  Youtube</span>
-</article>
+</article> --}}
