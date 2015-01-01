@@ -1,0 +1,52 @@
+body {
+    background: url("../images/bg.jpg") no-repeat fixed; 
+    background-size: cover;
+}
+
+div time.post-date {
+    background: #83ebcd;
+    background-image: radial-gradient(transparent 30%, rgba(0, 0, 0, 0.2));
+    border: 0 solid rgba(0,0,0,0.1);
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.2);
+}
+
+div.folded:before, div.folded:after {
+    bottom: 26px;
+    box-shadow: 0 28px 8px rgba(0,0,0,0.5);
+    content: "";
+    height: 28px;
+    position: absolute;
+    width: 48%;
+    z-index: -1;
+}
+div.folded:before {
+    left: 2%;
+    transform: rotate(-3deg);
+}
+div.folded:after {
+    right: 2%;
+    transform: rotate(3deg);
+}
+div.folded time.post-date {
+    border-width: 1px 1px 2px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    margin: 0;
+    padding: 4px 40px;
+    position: absolute;
+    right: -14px;
+    top: 12px;
+    height: auto;
+}
+div.folded time.post-date:after {
+    border-width: 7px;
+    border-style: solid;
+    border-color: #134 transparent transparent #134;
+    bottom: -15px;
+    content: "";
+    position: absolute;
+    right: -1px;
+}

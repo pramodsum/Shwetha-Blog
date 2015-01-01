@@ -1,0 +1,64 @@
+/* Big cover image on the home page */
+#site-head {
+    position: relative;
+    display: table;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    color: #fff;
+    background: transparent;
+    background-size: cover;
+}
+
+#blog-logo {
+    color: #fff;
+}
+#blog-logo:hover {
+    color: #83ebcd;
+}
+#blog-logo img {
+    display: block;
+    position: absolute;
+    right: -2em;
+    max-height: 100px;
+    width: auto;
+    margin: 10px auto;
+    line-height: 0;
+    float: right;
+    border-radius: 50%;
+}
+
+#back {
+    color: rgba(0,0,0,0.2);
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    padding: 6px;
+    font-size: 16px;
+}
+
+/* The details of your blog. Defined in ghost/settings/ */
+.blog-title {
+    margin: 10px 0 10px 0;
+    font-size: 5rem;
+    font-family: 'Dawning of a New Day', cursive;
+    letter-spacing: -1px;
+    text-align: left;
+    text-shadow: 2px 2px 1px rgba(0,0,0,0.5);
+    float: left;
+    max-width: 72%;
+}
+
+.blog-description {
+    margin: 0 0.3rem;
+    font-size: 1.8rem;
+    line-height: 1.5em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 300;
+    letter-spacing: 0;
+    text-align: left;
+    float: left;
+    clear: left;
+    max-width: 72%;
+}

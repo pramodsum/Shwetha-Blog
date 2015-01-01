@@ -1,0 +1,260 @@
+ /* Main CSS - based on Casper Â© 2013 Ghost Foundation */
+ 
+ /*==========================================================================
+   Table of Contents
+   ========================================================================== */
+
+/*
+
+    0.  Includes
+    1.  Icons
+    2.  General
+    3.  Utilities
+    4.  General
+    5.  Single Post
+    6.  Third Party Elements
+    7.  Pagination
+    8.  Footer
+    9.  Media Queries (Tablet)
+    10. Media Queries (Mobile)
+
+ */
+
+/* ==========================================================================
+   0. Includes - Ground zero
+   ========================================================================== */
+
+@import url(normalize.css);
+@import url(http://fonts.googleapis.com/css?family=Bad+Script|Dawning+of+a+New+Day);
+@import url(http://fonts.googleapis.com/css?family=Abel|Playfair+Display);
+@import url(icons.css);
+@import url(style.css);
+@import url(util.css);
+@import url(header.css);
+@import url(post.css);
+@import url(footer.css);
+
+
+/* Github */
+
+.gist table {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.gist .line-number {
+    min-width: 25px;
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   9. Media Queries - Smaller than 900px
+   ========================================================================== */
+
+@media only screen and (max-width: 900px) {
+
+    blockquote {
+        margin-left: 0;
+    }
+
+    #site-head {
+        -webkit-box-sizing: border-box; 
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; 
+        height: auto;
+        min-height: 140px;
+        padding: 0;
+        margin: 0;
+    }
+    #blog-logo img {
+        max-height: 90px;
+        right: -10px;
+    }
+    .blog-title {
+        font-size: 4rem;
+        letter-spacing: -1px;
+    }
+
+    .blog-description {
+        font-size: 1.7rem;
+        line-height: 1.5em;
+    }
+
+    .post {
+        font-size: 0.9em;
+        line-height: 1.6em;
+        padding: 4rem 2rem 4rem 8rem;
+        width: 69%;
+    }
+
+    .post-template .post {
+        padding-bottom: 1rem;
+    }
+
+    .post-template .post-header {
+        padding: 40px 0;
+    }
+    .card, .paperclip {
+        zoom: 80%;
+    }
+
+    h1 {
+        font-size: 3.8rem;
+        text-indent: -2px;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    h3 {
+        font-size: 3.3rem;
+    }
+
+    h4 {
+        font-size: 2.8rem;
+    }
+
+}
+
+/* ==========================================================================
+   10. Media Queries - Smaller than 500px
+   ========================================================================== */
+
+
+@media only screen and (max-width: 500px) {
+
+    #blog-logo img {
+        max-height: 80px;
+        right: 10px;
+    }
+
+    .inner, 
+    .pagination {
+        width: auto;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .post {
+        width:auto;
+        margin: 0;
+        margin-bottom: 2rem;
+        font-size: 0.8em;
+        line-height: 1.6em;
+        width: 100%;
+        padding: 2rem 1rem 2rem 3rem;
+        border-radius: 0 0 0 0;
+    }
+    .post:before {
+        display: none;
+    }
+    .post:before, .post:after {
+        border-radius: 0 0 0 0;
+    }
+    .card, .paperclip {
+        zoom: 50%;
+    }
+    #site-head {
+        padding: 0;
+        margin: 0;
+    }
+    #site-head-content {
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    .blog-title {
+        font-size: 3rem;
+    }
+
+    .blog-description {
+        font-size: 1.5rem;
+    }
+
+
+    h1, h2 {
+        font-size: 2.8rem;
+        line-height: 1.1em;
+        letter-spacing: -1px;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    h4 {
+        font-size: 2.3rem;
+    }
+
+    .post-template .post {
+        padding-bottom: 0;
+    }
+
+    .post-template .post-header {
+        padding: 20px 0;
+    }
+    .post-date {
+        right: 0;
+        top: 0;
+        background: transparent;
+        color: #333;
+    }
+    .post-title {
+        padding: 0;
+        margin: 1rem 0;
+        max-width: 80%;
+    }
+    .post-meta {
+        font-size: 1.3rem;
+    }
+    .post-excerpt a.read-more {
+        padding: 5px 10px;
+        font-size: 14px;
+        letter-spacing: 0px;
+    }
+    .card.untrans {
+        margin: 0 auto;
+    }
+    .post-footer {
+        padding: 4rem 0;
+        text-align: center;
+    }
+
+    .post-footer .author {
+        margin: 0 0 2rem 0;
+        padding: 0 0 1.6rem 0;
+        border-bottom: #EBF2F6 1px dashed;
+    }
+
+    .post-footer .share {
+        position: static;
+        width: auto;
+    }
+
+    .post-footer .share a {
+        margin: 1.4rem 0.8rem 0 0.8rem;
+    }
+
+    .older-posts,
+    .newer-posts {
+        position: static;
+        margin: 10px 0;
+    }
+
+    .page-number {
+        display: block;
+    }
+
+    .site-footer {
+        margin-top: 3rem;
+        font-size: 1.1rem;
+    }
+    .site-footer a.social {
+        font-size: 2rem;
+    }
+}
+
+/* ==========================================================================
+   End of file. Media queries should be the last thing here. Do not add stuff
+   below this point, or it will probably fuck everything up.
+   ========================================================================== 

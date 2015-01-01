@@ -1,0 +1,351 @@
+/* Every post, on every page, gets this style on its <article> tag */
+.post {
+    position: relative;
+    width:80%;
+    max-width: 700px;
+    margin: 4rem auto;
+    padding: 4rem 2rem 4rem 10rem;
+    border-radius: 5px;
+    word-break: break-word;
+    hyphens: auto;
+    background: url(../images/postbg.jpg) repeat-y;
+    -webkit-box-shadow: 0px 5px 8px rgba(50, 50, 50, 0.3);
+    -moz-box-shadow:    0px 5px 8px rgba(50, 50, 50, 0.3);
+    box-shadow:         0px 5px 8px rgba(50, 50, 50, 0.3);
+}
+
+.post:before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 49px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: url(../images/postbg-top.png) no-repeat;
+    border-radius: 8px 8px 0 0;
+}
+.post:after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url(../images/postbg-bottom.png) repeat-x;
+    border-radius: 0 0 8px 8px;
+}
+.post-date {
+    background: url(../images/ribbon2.png) no-repeat;
+    width: 140px;
+    height: 41px;
+    color: #fff;
+    position: absolute;
+    right: -48px;
+    top: 50px;
+    z-index: 5;
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+.post-title {
+    margin: 1rem 100px 0 0;
+}
+
+.post-title a {
+    text-decoration: none;
+}
+
+.post-excerpt p {
+    margin: 3rem 6rem 0 0;
+    font-size: 0.86em;
+    line-height: 2em;
+}
+
+.post-excerpt a, .post-content a {
+    color: #3c5b9a;
+}
+
+.post-excerpt a:hover, .post-content a:hover {
+    color: #238b6d;
+}
+.post-meta {
+    display: inline-block;
+    margin: 0 0 5px 0;
+    font-family: 'Abel', sans-serif;
+    font-size: 1.8rem;
+    color: #9EABB3;
+    z-index: 5;
+}
+
+.post-meta a {
+    color: #9EABB3;
+    text-decoration: none;
+}
+
+.post-meta a:hover {
+    text-decoration: underline;
+}
+
+.user-meta {
+    position: relative;
+    padding: 0.3rem 40px 0 100px;
+    min-height: 77px;
+}
+
+.user-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.user-name {
+    display: block;
+    font-weight: bold;
+}
+
+.user-bio {
+    display: block;
+    max-width: 440px;
+    font-size: 1.4rem;
+    line-height: 1.5em;
+}
+
+.publish-meta {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4.3rem 0 4rem 0;
+    text-align: right;
+}
+
+.publish-heading {
+    display: block;
+    font-weight: bold;
+}
+
+.publish-date {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.5em;
+}
+.paperclip {
+    display: block;
+    background: url(../images/paperclip.png) no-repeat;
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    left: -26px;
+    z-index: 10;
+    -webkit-transition: all .25s ease-out;
+    -moz-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+}
+.paperclip.removed {
+    width: 500px;
+    height: 500px;
+    left: -500px;
+    background-size: contain;
+    opacity: 0;
+}
+.card {
+    background: white;
+    display: inline-block;
+    margin-left: -60px;
+    padding: 1rem 1rem 3rem 1rem;
+    border-top: 1px solid rgba(200,200,200,0.5);
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+    -moz-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+    box-shadow: 0 3px 6px rgba(0,0,0,.5);
+    -webkit-transform: scale(0.95) rotate(-1deg) translate3d(0, 0, 0);
+    -moz-transform: scale(0.95) rotate(-1deg) translate3d(0, 0, 0);
+    transform: scale(0.95) rotate(-1deg) translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform .15s ease-in;
+    -moz-transition: -webkit-transform .15s ease-in;
+    transition: -webkit-transform .15s ease-in;
+}
+.card:hover {
+    -webkit-box-shadow: 0 3px 8px rgba(0,0,0,.7);
+    -moz-box-shadow: 0 3px 8px rgba(0,0,0,.7);
+    box-shadow: 0 3px 8px rgba(0,0,0,.7);
+}
+.card .caption {
+    height: 2em;
+    line-height: 2em;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+.post:nth-child(even) .card {
+    -webkit-transform: scale(0.95) rotate(1deg);
+    -moz-transform: scale(0.95) rotate(1deg);
+    transform: scale(0.95) rotate(1deg);
+}
+.card.untrans {
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    transform: none !important;
+}
+
+.post img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+/* Read more button */
+.post-excerpt a.read-more {
+    float: right;
+    padding: 10px 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 100%;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    display:inline-block;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Abel', sans-serif;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #16a085;
+    box-shadow: 0px 3px 0px 0px #04846b;
+}
+.post-excerpt a.read-more:hover {
+    background-color: #12ab8d;
+}
+
+.post-excerpt a.read-more:active {
+    padding-bottom: 12px;
+    margin-bottom: -1px;
+    box-shadow: 0px 1px 0px 0px #12ab8d;
+}
+.post-excerpt a.read-more, .post-excerpt a.read-more:hover, .post-excerpt a.read-more:active {
+    outline: 0 none;
+    text-decoration: none;
+    color: #fff;
+}
+/* ==========================================================================
+   5. Single Post - When you click on an individual post
+   ========================================================================== */
+
+/* Tweak the .post wrapper style */
+.post-template .post {
+    margin-top: 0;
+    border-bottom: none;
+}
+
+/* Insert some mad padding up in the header for better spacing */
+.post-template .post-header {
+    padding: 60px 0;
+}
+
+.post-content {
+    margin-right: 4rem;
+}
+/* The author credit area after the post */
+.post-footer {
+    position: relative;
+    margin: 4rem 4rem 0 0;
+    padding: 4rem 0 0 0;
+    border-top: #EBF2F6 1px solid;
+}
+
+.post-footer h4 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.post-footer p {
+    margin: 1rem 0;
+    font-size: 1.4rem;
+    line-height: 1.6em;
+}
+
+/* Create some space to the right for the share links */
+.post-footer .author {
+    margin-right: 180px;
+}
+
+/* Drop the share links in the space to the right.
+   Doing it like this means it's easier for the author bio
+   to be flexible at smaller screen sizes while the share
+   links remain at a fixed width the whole time */
+.post-footer .share {
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    width: 140px;
+}
+
+.post-footer .share a {
+    font-size: 1.8rem;
+    display: inline-block;
+    margin: 1.4rem 1.6rem 1.6rem 0;
+    color: #BBC7CC;
+}
+
+.post-footer .share a:hover {
+    color: #238b6d;
+}
+
+/* The main wrapper for our pagination links */
+.pagination {
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    margin: 4rem auto;
+    font-family: 'Abel', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+.pagination a {
+    color: #83ebcd;
+    background: #066;
+    border: 2px solid #83ebcd;
+}
+.pagination a:hover {
+    color: #eee;
+    border-color: #eee;
+    background: #12ab8d;
+}
+
+/* Push the previous/next links out to the left/right */
+.older-posts,
+.newer-posts {
+    position: absolute;
+    display: inline-block;
+    padding: 0 15px;
+    border: #EBF2F6 2px solid;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: border ease 0.3s;
+}
+
+.older-posts {
+    right: 0;
+}
+
+.page-number {
+    display: inline-block;
+    padding: 2px 0;
+}
+
+.newer-posts {
+    left: 0;
+}
+
+.older-posts:hover,
+.newer-posts:hover {
+    border-color: #9EABB3;
+}
