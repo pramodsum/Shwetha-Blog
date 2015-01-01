@@ -141,44 +141,6 @@
     width: 100%;
     height: auto;
 }
-/* Read more button */
-.post-excerpt a.read-more {
-    float: right;
-    padding: 10px 20px;
-    font-size: 16px;
-    letter-spacing: 1px;
-    line-height: 100%;
-    text-shadow: 0 1px rgba(0, 0, 0, 0.4);
-    color: #fff;
-    display:inline-block;
-    vertical-align: middle;
-    text-align: center;
-    cursor: pointer;
-    font-family: 'Raleway', sans-serif;
-    transition: all 0.1s;
-    -webkit-transition: all 0.1s;
-    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-    color: #fff;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    background-color: #16a085;
-    box-shadow: 0px 3px 0px 0px #04846b;
-}
-.post-excerpt a.read-more:hover {
-    background-color: #12ab8d;
-}
-
-.post-excerpt a.read-more:active {
-    padding-bottom: 12px;
-    margin-bottom: -1px;
-    box-shadow: 0px 1px 0px 0px #12ab8d;
-}
-.post-excerpt a.read-more, .post-excerpt a.read-more:hover, .post-excerpt a.read-more:active {
-    outline: 0 none;
-    text-decoration: none;
-    color: #fff;
-}
 /* ==========================================================================
    5. Single Post - When you click on an individual post
    ========================================================================== */
@@ -255,31 +217,14 @@
     text-align: center;
 }
 
-.pagination a {
-    color: #83ebcd;
-    background: #066;
-    border: 2px solid #83ebcd;
-}
-.pagination a:hover {
-    color: #eee;
-    border-color: #eee;
-    background: #12ab8d;
-}
-
 /* Push the previous/next links out to the left/right */
-.older-posts,
-.newer-posts {
-    position: absolute;
-    display: inline-block;
-    padding: 0 15px;
-    border: #EBF2F6 2px solid;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: border ease 0.3s;
-}
-
 .older-posts {
     right: 0;
+}
+
+.older-posts:hover,
+.newer-posts:hover {
+    border-color: #f43059;
 }
 
 .page-number {
@@ -289,11 +234,6 @@
 
 .newer-posts {
     left: 0;
-}
-
-.older-posts:hover,
-.newer-posts:hover {
-    border-color: #9EABB3;
 }
 
 time.post-date {
