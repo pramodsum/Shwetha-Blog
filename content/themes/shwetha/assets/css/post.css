@@ -38,21 +38,19 @@
     border-radius: 0 0 8px 8px;
 }
 .post-date {
-    background: url(../images/ribbon2.png) no-repeat;
-    width: 140px;
-    height: 41px;
     color: #fff;
     position: absolute;
     right: -48px;
     top: 50px;
     z-index: 5;
     text-align: center;
-    font-family: 'Abel', sans-serif;
+    font-family: 'Coming Soon', cursive;
     font-weight: bold;
     font-size: 16px;
 }
 .post-title {
     margin: 1rem 100px 0 0;
+    font-family: 'Shadows Into Light', cursive;
 }
 
 .post-title a {
@@ -70,12 +68,12 @@
 }
 
 .post-excerpt a:hover, .post-content a:hover {
-    color: #238b6d;
+    color: #f43059;
 }
 .post-meta {
     display: inline-block;
     margin: 0 0 5px 0;
-    font-family: 'Abel', sans-serif;
+    font-family: 'Shadows Into Light', cursive;
     font-size: 1.8rem;
     color: #9EABB3;
     z-index: 5;
@@ -132,61 +130,10 @@
     font-size: 1.4rem;
     line-height: 1.5em;
 }
-.paperclip {
-    display: block;
-    background: url(../images/paperclip.png) no-repeat;
-    width: 128px;
-    height: 128px;
-    position: absolute;
-    left: -26px;
-    z-index: 10;
-    -webkit-transition: all .25s ease-out;
-    -moz-transition: all .25s ease-out;
-    transition: all .25s ease-out;
-}
-.paperclip.removed {
-    width: 500px;
-    height: 500px;
-    left: -500px;
-    background-size: contain;
-    opacity: 0;
-}
-.card {
-    background: white;
-    display: inline-block;
-    margin-left: -60px;
-    padding: 1rem 1rem 3rem 1rem;
-    border-top: 1px solid rgba(200,200,200,0.5);
-    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
-    -moz-box-shadow: 0 3px 6px rgba(0,0,0,.5);
-    box-shadow: 0 3px 6px rgba(0,0,0,.5);
-    -webkit-transform: scale(0.95) rotate(-1deg) translate3d(0, 0, 0);
-    -moz-transform: scale(0.95) rotate(-1deg) translate3d(0, 0, 0);
-    transform: scale(0.95) rotate(-1deg) translate3d(0, 0, 0);
-    -webkit-transition: -webkit-transform .15s ease-in;
-    -moz-transition: -webkit-transform .15s ease-in;
-    transition: -webkit-transform .15s ease-in;
-}
-.card:hover {
-    -webkit-box-shadow: 0 3px 8px rgba(0,0,0,.7);
-    -moz-box-shadow: 0 3px 8px rgba(0,0,0,.7);
-    box-shadow: 0 3px 8px rgba(0,0,0,.7);
-}
-.card .caption {
-    height: 2em;
-    line-height: 2em;
-    overflow: hidden;
-    -webkit-font-smoothing: antialiased;
-}
 .post:nth-child(even) .card {
     -webkit-transform: scale(0.95) rotate(1deg);
     -moz-transform: scale(0.95) rotate(1deg);
     transform: scale(0.95) rotate(1deg);
-}
-.card.untrans {
-    -webkit-transform: none !important;
-    -moz-transform: none !important;
-    transform: none !important;
 }
 
 .post img {
@@ -207,8 +154,7 @@
     vertical-align: middle;
     text-align: center;
     cursor: pointer;
-    font-weight: bold;
-    font-family: 'Abel', sans-serif;
+    font-family: 'Raleway', sans-serif;
     transition: all 0.1s;
     -webkit-transition: all 0.1s;
     text-shadow: 0 1px rgba(0, 0, 0, 0.3);
@@ -303,7 +249,7 @@
     width: 80%;
     max-width: 700px;
     margin: 4rem auto;
-    font-family: 'Abel', sans-serif;
+    font-family: 'Shadows Into Light', cursive;
     font-size: 1.5rem;
     color: #fff;
     text-align: center;
@@ -348,4 +294,49 @@
 .older-posts:hover,
 .newer-posts:hover {
     border-color: #9EABB3;
+}
+
+time.post-date {
+    background: #f43059;
+    border: 0 solid rgba(0,0,0,0.1);
+    color: #fff;
+    position: relative;
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.2);
+}
+
+.folded:before, .folded:after {
+    bottom: 26px;
+    box-shadow: 0 28px 8px rgba(0,0,0,0.5);
+    content: "";
+    height: 28px;
+    position: absolute;
+    width: 48%;
+    z-index: -1;
+}
+.folded:before {
+    left: 2%;
+    transform: rotate(-3deg);
+}
+.folded:after {
+    right: 2%;
+    transform: rotate(3deg);
+}
+.folded time.post-date {
+    border-width: 1px 1px 2px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    margin: 0;
+    padding: 2px 30px;
+    position: absolute;
+    right: -14px;
+    top: 12px;
+    height: auto;
+}
+.folded time.post-date:after {
+    border-width: 7px;
+    border-style: solid;
+    border-color: #134 transparent transparent #134;
+    bottom: -15px;
+    content: "";
+    position: absolute;
+    right: -1px;
 }

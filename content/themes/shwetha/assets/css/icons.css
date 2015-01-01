@@ -40,3 +40,5 @@
 .icon-facebook:before {
     content: "\e004";
 }
+
+@import url(ionicons.css);
