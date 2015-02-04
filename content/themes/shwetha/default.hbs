@@ -8,13 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content="Ghost 0.3" />
     
+    <script src="{{asset "js/jquery.min.js"}}"></script>
+    
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/custom.css"}}" />
-    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" />
+    {{!-- <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" /> --}}
     
     <link rel="alternate" type="application/rss+xml" title="RSS" href="rss/">
     
-    <title>Shwetha Blog</title>
+    <title>{{@blog.title}}</title>
   </head>
   <body class="home-template">
     {{> "header"}}
@@ -24,8 +26,6 @@
     </main>
 
     {{> "footer"}}
-      
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
   </body>
 </html>

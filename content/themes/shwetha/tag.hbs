@@ -1,0 +1,11 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+<div class="main-header-content inner">
+  <center>
+    <h1 class="page-title">#{{tag.name}}</h1>
+  </center>
+</div>
+
+{{! The tag below includes the post loop - partials/loop.hbs }}
+{{> "loop"}}

@@ -24,17 +24,18 @@
    0. Includes - Ground zero
    ========================================================================== */
 
+@import url(bootstrap.css);
 @import url(normalize.css);
+@import url(animate.css);
 @import url(http://fonts.googleapis.com/css?family=Bad+Script|Shadows+Into+Light|Dawning+of+a+New+Day|Coming+Soon);
 @import url(http://fonts.googleapis.com/css?family=Abel|Playfair+Display);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Raleway);
-@import url(icons.css);
+@import url(ionicons.css);
 @import url(style.css);
 @import url(util.css);
 @import url(header.css);
 @import url(post.css);
 @import url(footer.css);
-@import url(animate.css);
 @import url(button.css);
 
 
@@ -87,7 +88,11 @@
         font-size: 0.9em;
         line-height: 1.6em;
         padding: 4rem 2rem 4rem 8rem;
-        width: 69%;
+        /*width: 69%;*/
+    }
+
+    article.post.about{
+        width: 95%;
     }
 
     .post-template .post {

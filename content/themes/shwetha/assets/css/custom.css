@@ -27,3 +27,18 @@ body {
 .shake {
   display:inline-block
 }
+
+.blog-title:hover,
+.blog-title:focus {
+  -webkit-animation-name: tada;
+          animation-name: tada;
+  -webkit-animation-duration: 0.8s;
+  -webkit-transform-origin:50% 50%;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+.page-title {
+  color: #f43059;
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.5);
+}

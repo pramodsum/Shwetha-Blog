@@ -236,6 +236,20 @@
     left: 0;
 }
 
+.post-title:hover,
+.post-title:focus {
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: 0.8s;
+  -webkit-transform-origin:50% 50%;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+}
+
+/*
+    Time
+ */
+
 time.post-date {
     background: #f43059;
     border: 0 solid rgba(0,0,0,0.1);
@@ -274,7 +288,7 @@ time.post-date {
 .folded time.post-date:after {
     border-width: 7px;
     border-style: solid;
-    border-color: #134 transparent transparent #134;
+    border-color: #8A1B35 transparent transparent #8A1B35;
     bottom: -15px;
     content: "";
     position: absolute;
